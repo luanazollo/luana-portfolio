@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luana Zollo – UX/UI Designer · Neighborly Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f8f7;--surf:#fff;--ink:#14283a;--mut:#4d6272;--line:#d3e0dd;--acc:#0e7c7b;--sig:#f2b705;--soft:#e1efec;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1b26;--surf:#162636;--ink:#eaf2f1;--mut:#a3b8c4;--line:#27405a;--acc:#4fc3bf;--soft:#173544}}
+:root[data-theme="dark"]{--bg:#0f1b26;--surf:#162636;--ink:#eaf2f1;--mut:#a3b8c4;--line:#27405a;--acc:#4fc3bf;--soft:#173544}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--acc)}a:focus-visible,button:focus-visible{outline:3px solid var(--sig);outline-offset:3px}
+.w{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-weight:600}
+nav .l{display:flex;gap:22px;flex-wrap:wrap}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--acc)}
+.hero{padding:56px 0 72px}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5.6rem);font-weight:800;letter-spacing:-.03em;max-width:15ch}
+.hero p.lead{font-size:1.25rem;max-width:56ch;color:var(--mut);margin:24px 0 0}
+.tag{display:inline-block;background:var(--sig);color:#14283a;font-weight:700;font-size:.9rem;padding:4px 12px;border-radius:99px;margin-bottom:22px}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.meta b{display:block;font-size:.85rem;color:var(--mut);font-weight:600}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:700;letter-spacing:-.02em;margin-bottom:12px;max-width:22ch}
+.sub{color:var(--mut);max-width:62ch;margin:0 0 36px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:1.35rem;margin-bottom:2px}.card .r{color:var(--acc);font-weight:600;font-size:.95rem;margin:0 0 14px}
+.card dt{font-weight:600;margin-top:12px}.card dd{margin:2px 0 0;color:var(--mut);font-size:.97rem}
+.pb{border-left:4px solid var(--sig);padding:4px 0 4px 20px;font-size:1.3rem;font-family:"Bricolage Grotesque",sans-serif;font-weight:500;max-width:34ch;margin:0 0 36px}
+.feat{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:0;padding:0;list-style:none}
+.feat li{background:var(--soft);border-radius:12px;padding:16px 18px;font-size:.97rem}.feat b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 28px;padding:0;list-style:none;font-weight:600}
+.flow li{background:var(--surf);border:1px solid var(--line);border-radius:99px;padding:8px 16px}
+.flow li+li::before{content:"";}
+.big{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:44px}
+.big div{border-top:4px solid var(--acc);padding-top:10px}
+.big strong{display:block;font:800 clamp(2.4rem,6vw,3.6rem)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.big span{color:var(--mut);font-size:.95rem}
+.bars{display:grid;gap:10px;margin:14px 0 0;max-width:640px}
+.bar{display:grid;grid-template-columns:130px 1fr 52px;gap:12px;align-items:center;font-size:.95rem}
+.bar i{display:block;height:14px;border-radius:7px;background:var(--acc)}
+.bar .t{background:var(--soft);border-radius:7px}
+.bar em{font-style:normal;font-weight:700;text-align:right}
+table{border-collapse:collapse;width:100%;font-size:.97rem}
+.sc{overflow-x:auto}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}th{color:var(--mut);font-weight:600}
+.two{display:grid;gap:36px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+ul.p{padding-left:20px;margin:8px 0}ul.p li{margin-bottom:8px}
+footer{padding:64px 0 80px;border-top:2px solid var(--ink)}
+footer h2{max-width:none}
+.cta{display:inline-block;background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:99px;font-weight:600;text-decoration:none;margin:12px 12px 0 0}
+.cta.o{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+@media (max-width:560px){.bar{grid-template-columns:96px 1fr 48px}body{font-size:16px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Gallerie di schermate del progetto */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:30px 0 12px}
+.gallery figure{margin:0;background:var(--surf);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.gallery img{display:block;width:100%;height:260px;object-fit:contain;background:#f3f5ff;padding:10px}
+.gallery figcaption{padding:12px 14px;font-size:.92rem;font-weight:600;color:var(--ink)}
+.gallery.wide{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.gallery.wide img{height:320px}
+.gallery-note{font-size:.9rem;color:var(--mut);margin-top:12px}
+@media(max-width:560px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gallery img{height:190px}.gallery.wide img{height:220px}.gallery figcaption{font-size:.82rem;padding:9px}}
+
+.language-control{display:inline-flex;align-items:center;flex:0 0 auto;margin-left:8px}
+.language-control select{font:600 .82rem/1.2 inherit;color:var(--ink);background:var(--surf);border:1px solid var(--line);border-radius:999px;padding:8px 10px;cursor:pointer}
+.language-control select:focus-visible{outline:3px solid var(--sig);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+</style>
+</head>
+<body>
+<div class="w">
+<nav><strong>Luana Zollo</strong><div class="l">
+<a href="#problema">Problema</a><a href="#persone">Persone</a><a href="#soluzione">Soluzione</a><a href="#test">Test</a><a href="#contatti">Contatti</a><a href="index.html">Chi sono</a></div><label class="language-control" aria-label="Select language"><span class="sr-only">Language</span><select id="languageSwitcher"><option value="it">🇮🇹 IT</option><option value="en">🇬🇧 EN</option></select></label></nav>
+
+<header class="hero">
+<span class="tag">Case study · Tesi triennale</span>
+<h1>Un quartiere, un'unica app.</h1>
+<p class="lead">Neighborly Hub riunisce avvisi del Comune, vita di quartiere e un assistente AI con avatar, pensato anche per chi con lo smartphone non si sente sicuro. L'ho progettata in Figma, testata con gli utenti e trasformata in un'app funzionante.</p>
+<div class="meta">
+<div><b>Il mio ruolo</b>UX/UI design, ricerca, sviluppo</div>
+<div><b>Periodo</b>nov 2025 – lug 2026</div>
+<div><b>Strumenti</b>Figma, React/Next.js, Docker, PostgreSQL</div>
+<div><b>Test</b>13 compiti · 3 partecipanti</div>
+</div>
+</header>
+
+<section id="problema">
+<h2>Per informarsi su un quartiere servono troppe app.</h2>
+<p class="sub">Meteo, bus, sharing, avvisi del Comune, gruppi social: ogni cosa vive in un posto diverso. Chi è giovane perde tempo a saltare da un'app all'altra. Chi ha poca dimestichezza digitale, a volte, perde proprio l'informazione.</p>
+<p class="pb">Un'interfaccia civica non deve solo essere bella: deve dire chiaramente a cosa serve ogni elemento.</p>
+<p class="sub" style="margin:0">Ho studiato le piattaforme esistenti (come Nextdoor) e ho definito i requisiti partendo da una domanda: come mettere in un solo posto cittadini, Comune e servizi di quartiere, senza escludere nessuno?</p>
+</section>
+
+<section id="persone">
+<h2>Tre persone, tre modi di vivere il quartiere.</h2>
+<p class="sub">Ho costruito tre personas con bisogni e frustrazioni molto diversi. Ogni scelta di design doveva funzionare per tutte e tre.</p>
+<div class="grid">
+<article class="card"><h3>Luca, 22 anni</h3><p class="r">Studente fuori sede · livello tecnico avanzato</p>
+<dl><dt>Ha bisogno di</dt><dd>Informazioni in tempo reale: se il bus è in ritardo o sta per piovere, cambia piano subito.</dd><dt>Si frustra quando</dt><dd>Deve passare da un'app all'altra o compilare segnalazioni troppo complicate.</dd></dl></article>
+<article class="card"><h3>Elena, 35 anni</h3><p class="r">Impiegata e mamma · livello tecnico funzionale</p>
+<dl><dt>Ha bisogno di</dt><dd>Sicurezza e controllo: avvisi su lavori stradali e la certezza che la segnalazione arrivi davvero al Comune.</dd><dt>Si frustra quando</dt><dd>Si sente ignorata dalle istituzioni e non vede effetti visibili.</dd></dl></article>
+<article class="card"><h3>Rosa, 70 anni</h3><p class="r">Pensionata, residente storica · principiante</p>
+<dl><dt>Ha bisogno di</dt><dd>Inclusione e accessibilità: schermi grandi e leggibili, senza accessi complicati.</dd><dt>Si frustra quando</dt><dd>Scopre di aver perso un evento perché l'avviso era «solo su internet».</dd></dl></article>
+</div>
+</section>
+
+<section id="soluzione">
+<h2>Una dashboard sola, con il Comune dentro.</h2>
+<p class="sub">Il prototipo in Figma copre i flussi principali del cittadino. Gli avvisi ufficiali restano separati dai post degli utenti, così si riconoscono subito.</p>
+<ul class="feat">
+<li><b>Avvisi del Comune</b>Messaggi fissati in alto, con la viabilità alternativa.</li>
+<li><b>Decisione rapida</b>Sondaggi sì/no con una scadenza ben visibile.</li>
+<li><b>Segnalazioni</b>Invio in forma PEC e conferma con numero di protocollo.</li>
+<li><b>Chat di quartiere</b>Messaggi e foto per rispondere in modo visivo e veloce.</li>
+<li><b>Ambiente e mobilità</b>Meteo, energia consumata, servizi di sharing.</li>
+<li><b>Premi per l'aiuto reciproco</b>Punti, livelli e badge per chi partecipa.</li>
+</ul>
+<h3 style='margin-top:44px'>Le schermate dell'app</h3>
+<p class='sub'>Una selezione delle schermate progettate per i principali servizi di Neighborly Hub.</p>
+<div class='gallery wide'><figure><img src="images/dashboard-profilo.jpg" alt="Schermate della dashboard e del profilo" loading="lazy"><figcaption>Dashboard e profilo</figcaption></figure><figure><img src="images/meteo.jpg" alt="Schermate della sezione meteo" loading="lazy"><figcaption>Meteo</figcaption></figure><figure><img src="images/eventi.jpg" alt="Schermate degli eventi di quartiere" loading="lazy"><figcaption>Eventi</figcaption></figure><figure><img src="images/chat.jpg" alt="Schermate della chat di quartiere" loading="lazy"><figcaption>Chat</figcaption></figure><figure><img src="images/votazioni.jpg" alt="Schermate dei sondaggi e delle votazioni" loading="lazy"><figcaption>Votazioni</figcaption></figure><figure><img src="images/ticket-aperti.jpg" alt="Schermate dello stato dei ticket" loading="lazy"><figcaption>Ticket e richieste</figcaption></figure><figure><img src="images/segnalazioni.jpg" alt="Schermate per inviare segnalazioni" loading="lazy"><figcaption>Segnalazioni</figcaption></figure><figure><img src="images/mappa.jpg" alt="Schermate della mappa del quartiere" loading="lazy"><figcaption>Mappa</figcaption></figure><figure><img src="images/sharing.jpg" alt="Schermate dei servizi di sharing" loading="lazy"><figcaption>Sharing</figcaption></figure><figure><img src="images/ambiente.jpg" alt="Schermate della sezione ambiente" loading="lazy"><figcaption>Ambiente</figcaption></figure><figure><img src="images/centro-notifiche.jpg" alt="Schermate del centro notifiche" loading="lazy"><figcaption>Notifiche</figcaption></figure><figure><img src="images/impostazioni.jpg" alt="Schermate delle impostazioni" loading="lazy"><figcaption>Impostazioni</figcaption></figure></div>
+<p class='gallery-note'>Le immagini mostrano schermate del prototipo e dei flussi dell'applicazione.</p>
+<h3 style='margin-top:48px'>Accesso, supporto e trasparenza</h3>
+<p class='sub'>Ho progettato anche i passaggi di accesso e recupero dell'account, insieme alle pagine informative e di assistenza.</p>
+<div class='gallery'><figure><img src="images/autenticazione.jpg" alt="Panoramica dei flussi di autenticazione" loading="lazy"><figcaption>Flussi di autenticazione</figcaption></figure><figure><img src="images/login.jpg" alt="Schermata di accesso" loading="lazy"><figcaption>Login</figcaption></figure><figure><img src="images/registrazione.jpg" alt="Schermata di registrazione" loading="lazy"><figcaption>Registrazione</figcaption></figure><figure><img src="images/recupero-password.jpg" alt="Schermata di recupero password" loading="lazy"><figcaption>Recupero password</figcaption></figure><figure><img src="images/nuova-password.jpg" alt="Schermata per creare una nuova password" loading="lazy"><figcaption>Nuova password</figcaption></figure><figure><img src="images/verifica-email.jpg" alt="Schermata di verifica email" loading="lazy"><figcaption>Verifica email</figcaption></figure><figure><img src="images/supporto.jpg" alt="Schermate del centro assistenza" loading="lazy"><figcaption>Supporto</figcaption></figure><figure><img src="images/linee-guida.jpg" alt="Schermate delle linee guida della community" loading="lazy"><figcaption>Community guidelines</figcaption></figure><figure><img src="images/privacy-policy.jpg" alt="Schermate dell’informativa privacy" loading="lazy"><figcaption>Privacy policy</figcaption></figure></div>
+<div class="two" style="margin-top:44px">
+<div><h3>L'assistente AI con avatar</h3>
+<p>Per chi ha poca fiducia con le app ho progettato un'alternativa: basta fare una domanda a voce o per iscritto. L'assistente risponde con dati reali del Comune e, se non li trova, rimanda alle fonti ufficiali.</p></div>
+<div><h3>Dal prototipo all'app funzionante</h3>
+<ul class="flow"><li>Figma</li><li>Microservizi</li><li>Docker</li><li>React / Next.js</li></ul>
+<p>Il sistema è diviso in servizi (accesso, community, avvisi civici, assistente AI, ambiente, gamification) e supporta più Comuni, con i dati di ciascuno tenuti separati.</p></div>
+</div>
+</section>
+
+<section id="test">
+<h2>Cosa ha detto il test di usabilità.</h2>
+<p class="sub">Ogni partecipante ha svolto compiti guidati, osservati con tempi, livello di frustrazione e commenti. Poi ha compilato i questionari SUS e UEQ.</p>
+<div class="big">
+<div><strong>89,7%</strong><span>successo medio nei compiti</span></div>
+<div><strong>82,5</strong><span>punteggio SUS medio su 100</span></div>
+<div><strong>+2,11</strong><span>chiarezza, la scala UEQ più alta</span></div>
+</div>
+<div class="two">
+<div><h3>Scale UEQ</h3>
+<div class="bars" role="img" aria-label="Punteggi UEQ: Perspicuità 2,11; Attrattività 1,72; Stimolazione 1,61; Efficienza 1,44; Affidabilità 1,28; Originalità 1,17">
+<div class="bar"><span>Chiarezza</span><div class="t"><i style="width:70%"></i></div><em>+2,11</em></div>
+<div class="bar"><span>Attrattività</span><div class="t"><i style="width:57%"></i></div><em>+1,72</em></div>
+<div class="bar"><span>Stimolazione</span><div class="t"><i style="width:54%"></i></div><em>+1,61</em></div>
+<div class="bar"><span>Efficienza</span><div class="t"><i style="width:48%"></i></div><em>+1,44</em></div>
+<div class="bar"><span>Affidabilità</span><div class="t"><i style="width:43%"></i></div><em>+1,28</em></div>
+<div class="bar"><span>Originalità</span><div class="t"><i style="width:39%"></i></div><em>+1,17</em></div>
+</div></div>
+<div class="sc"><h3>Per partecipante</h3>
+<table><thead><tr><th>Partecipante</th><th>Successo</th><th>SUS</th></tr></thead><tbody>
+<tr><td>A</td><td>91,7%</td><td>90,0</td></tr>
+<tr><td>B</td><td>87,5%</td><td>92,5</td></tr>
+<tr><td>C</td><td>90,0%</td><td>65,0</td></tr></tbody></table></div>
+</div>
+<h3 style="margin-top:44px">Cosa ho imparato</h3>
+<ul class="p">
+<li><b>Funziona:</b> la scadenza gialla «Scade tra 10 min» spinge a votare, e il numero di protocollo dopo la segnalazione dà fiducia.</li>
+<li><b>Da migliorare:</b> un partecipante ha esitato sul tasto «Invia (PEC)» e il riquadro «Salute del Quartiere» non dava feedback al tocco.</li>
+<li><b>Il problema principale:</b> la griglia dei servizi e l'avatar del profilo rispondevano in ritardo. Il punteggio più basso (SUS 65) è arrivato da chi ha meno esperienza con la tecnologia. La reattività del front-end è la prima cosa da sistemare.</li>
+</ul>
+<p class="sub" style="margin:24px 0 0">Il campione è di 3 persone: i numeri indicano una direzione, non sono una misura definitiva.</p>
+</section>
+
+<footer id="contatti">
+<h2>Parliamone.</h2>
+<p class="sub">Cerco uno stage in UX/UI design.</p>
+<a class="cta" href="mailto:luanazollo10@gmail.com">Scrivimi</a>
+<a class="cta o" href="https://www.linkedin.com/in/luana-zollo-7037aa391/" rel="noopener">LinkedIn</a>
+</footer>
+</div>
+
+<script>
+(() => {
+  const translations = {"Profilo": "About", "Competenze": "Skills", "Progetti": "Projects", "Contatti": "Contact", "Problema": "The challenge", "Persone": "Users", "Soluzione": "Solution", "Test": "Testing", "Chi sono": "About me", "Portfolio · UX/UI Design": "Portfolio · UX/UI Design", "Ciao, sono Luana Zollo": "Hi, I’m Luana Zollo", "Laureata in Informatica e Tecnologie per la Produzione del Software (107/110), progetto esperienze digitali che uniscono ricerca sugli utenti, UX/UI design e sviluppo. Mi interessa trasformare bisogni reali in servizi chiari, intuitivi e accessibili.": "Computer Science graduate (107/110), I design digital experiences that bring together user research, UX/UI design and development. I’m interested in turning real needs into clear, intuitive and accessible services.", "Vedi il case study →": "View the case study →", "Scrivimi": "Get in touch", "Dal codice all'esperienza utente.": "From code to user experience.", "Il mio percorso combina competenze informatiche e attenzione alle persone: analizzo i bisogni, organizzo le informazioni e progetto flussi digitali che siano comprensibili anche per chi ha meno familiarità con la tecnologia.": "My background combines computer science skills with a focus on people: I analyse needs, organise information and design digital flows that are easy to understand, even for people who are less familiar with technology.", "La tesi triennale è stata dedicata a Neighborly Hub, una piattaforma civica per avvicinare cittadini e amministrazione. Il lavoro ha unito ricerca sul contesto d'uso, personas, user flow, prototipazione in Figma, sviluppo full-stack e test di usabilità.": "My bachelor’s thesis focused on Neighborly Hub, a civic platform designed to bring citizens and local authorities closer together. The work combined context research, personas, user flows, Figma prototyping, full-stack development and usability testing.", "Un buon prodotto digitale non deve solo funzionare: deve essere comprensibile e utile per le persone che lo usano.": "A good digital product should do more than work: it should be understandable and useful to the people who use it.", "Formazione": "Education", "Servizi Human Centered per Società Digitali": "Human-Centred Services for Digital Society", "Università degli Studi di Torino · Ott 2026 – Present": "University of Turin · Oct 2026 – Present", "Laurea Magistrale": "Master’s Degree", "Informatica e Tecnologie per la Produzione del Software": "Computer Science and Software Development Technologies", "Università degli Studi di Bari Aldo Moro · Ott 2023 – Lug 2026": "University of Bari Aldo Moro · Oct 2023 – Jul 2026", "Laurea triennale, voto 107/110. Tra le discipline rilevanti: Interazione Uomo-Macchina, Ingegneria del Software, basi di dati e sistemi informativi.": "Bachelor’s Degree, grade: 107/110. Relevant subjects include Human-Computer Interaction, Software Engineering, databases and information systems.", "Esperienza": "Experience", "Rappresentante degli studenti": "Student Representative", "Gen 2024 – Lug 2026": "Jan 2024 – Jul 2026", "Facilitazione della comunicazione sui servizi didattici e digitali tra studenti, dipartimento e corpo docente.": "Facilitated communication about educational and digital services between students, the department and faculty.", "Ricerca, design e sviluppo.": "Research, design and development.", "Le competenze che porto nei progetti, dalla comprensione del problema alla realizzazione tecnica.": "The skills I bring to projects, from understanding the problem to technical implementation.", "UX Research & Design": "UX Research & Design", "Questionari e interviste": "Surveys and interviews", "Architettura dell'informazione": "Information Architecture", "Prototipazione & Usabilità": "Prototyping & Usability", "Bassa e alta fedeltà": "Low- and high-fidelity", "Front-end & Programmazione": "Front-end & Programming", "Backend, dati & strumenti": "Backend, data & tools", "Progetto in evidenza": "Featured project", "Tesi triennale · UX/UI end-to-end": "Bachelor’s thesis · End-to-end UX/UI", "Neighborly Hub — un quartiere, un'unica app.": "Neighborly Hub — one neighbourhood, one app.", "Una piattaforma civica che riunisce avvisi del Comune, vita di quartiere e assistenza AI. Il progetto parte dallo studio dei bisogni degli utenti e arriva alla progettazione in Figma, allo sviluppo dell'applicazione e alla valutazione dell'usabilità.": "A civic platform bringing together municipal announcements, neighbourhood life and AI assistance. The project spans user needs research, Figma design, application development and usability evaluation.", "Ricerca utenti": "User research", "Personas & user flow": "Personas & user flows", "Test di usabilità": "Usability testing", "Leggi il case study completo →": "Read the full case study →", "Altri progetti": "Other projects", "Sviluppo web e analisi dei requisiti.": "Web development and requirements analysis.", "Altri lavori del mio percorso, presentati per il tipo di contributo effettivamente svolto.": "Other projects from my background, presented according to the contribution I actually made.", "Sviluppo web · Dic 2025 – Gen 2026": "Web development · Dec 2025 – Jan 2026", "Web app per supportare lo studio a partire da documenti personali, con quiz e flashcard generati tramite AI. Ho sviluppato un'applicazione interattiva che integra Gemini API e ChromaDB per il recupero semantico dei contenuti tramite RAG.": "A web app that supports studying from personal documents, with AI-generated quizzes and flashcards. I developed an interactive application integrating the Gemini API and ChromaDB for semantic content retrieval through RAG.", "Analisi dei requisiti · Mar – Giu 2025": "Requirements analysis · Mar – Jun 2025", "Piattaforma universitaria di recruiting": "University recruiting platform", "Analisi dei competitor e definizione dei requisiti funzionali, non funzionali ed esperienziali per una piattaforma che facilita l'incontro tra studenti e opportunità professionali. Il lavoro si è concentrato sull'analisi e sui requisiti, non sullo sviluppo di un prodotto finito.": "Competitor analysis and definition of functional, non-functional and user experience requirements for a platform connecting students with professional opportunities. The work focused on analysis and requirements, not on developing a finished product.", "Analisi competitor": "Competitor analysis", "Requisiti UX": "UX requirements", "Ingegneria del software": "Software engineering", "Parliamone": "Let’s talk", "Costruiamo esperienze digitali più chiare e accessibili.": "Let’s build clearer and more accessible digital experiences.", "Sono interessata a opportunità di stage in UX/UI Design, dove mettere in pratica ricerca sugli utenti, progettazione e competenze tecniche.": "I’m interested in UX/UI Design internship opportunities where I can apply my skills in user research, design and technology.", "Email": "Email", "LinkedIn": "LinkedIn", "Case study · Tesi triennale": "Case study · Bachelor’s thesis", "Un quartiere, un'unica app.": "One neighbourhood, one app.", "Neighborly Hub riunisce avvisi del Comune, vita di quartiere e un assistente AI con avatar, pensato anche per chi con lo smartphone non si sente sicuro. L'ho progettata in Figma, testata con gli utenti e trasformata in un'app funzionante.": "Neighborly Hub brings together municipal announcements, neighbourhood life and an AI assistant with an avatar, designed also for people who are not confident using a smartphone. I designed it in Figma, tested it with users and turned it into a working application.", "Per informarsi su un quartiere servono troppe app.": "It takes too many apps to stay informed about a neighbourhood.", "Meteo, bus, sharing, avvisi del Comune, gruppi social: ogni cosa vive in un posto diverso. Chi è giovane perde tempo a saltare da un'app all'altra. Chi ha poca dimestichezza digitale, a volte, perde proprio l'informazione.": "Weather, buses, sharing services, municipal announcements and social groups: everything lives in a different place. Younger people waste time switching between apps. People with limited digital skills can miss the information altogether.", "Un’interfaccia civica non deve solo essere bella: deve dire chiaramente a cosa serve ogni elemento.": "A civic interface should not only look good: it should make the purpose of every element clear.", "Ho studiato le piattaforme esistenti (come Nextdoor) e ho definito i requisiti partendo da una domanda: come mettere in un solo posto cittadini, Comune e servizi di quartiere, senza escludere nessuno?": "I studied existing platforms (such as Nextdoor) and defined the requirements around one question: how can citizens, the municipality and neighbourhood services be brought together in one place without excluding anyone?", "Tre persone, tre modi di vivere il quartiere.": "Three people, three ways of experiencing a neighbourhood.", "Ho costruito tre personas con bisogni e frustrazioni molto diversi. Ogni scelta di design doveva funzionare per tutte e tre.": "I created three personas with very different needs and frustrations. Every design decision had to work for all three.", "Luca, 22 anni": "Luca, 22", "Studente fuori sede · livello tecnico avanzato": "University student living away from home · advanced digital skills", "Ha bisogno di": "Needs", "Informazioni in tempo reale: se il bus è in ritardo o sta per piovere, cambia piano subito.": "Real-time information: if the bus is delayed or rain is coming, he can change his plans immediately.", "Si frustra quando": "Gets frustrated when", "Deve passare da un'app all'altra o compilare segnalazioni troppo complicate.": "He has to switch between apps or fill in overly complicated reports.", "Elena, 35 anni": "Elena, 35", "Impiegata e mamma · livello tecnico funzionale": "Office worker and mother · functional digital skills", "Sicurezza e controllo: avvisi su lavori stradali e la certezza che la segnalazione arrivi davvero al Comune.": "Safety and control: roadwork alerts and confirmation that her report really reaches the municipality.", "Si sente ignorata dalle istituzioni e non vede effetti visibili.": "She feels ignored by institutions and sees no visible results.", "Rosa, 70 anni": "Rosa, 70", "Pensionata, residente storica · principiante": "Retired, long-time resident · beginner digital skills", "Inclusione e accessibilità: schermi grandi e leggibili, senza accessi complicati.": "Inclusion and accessibility: large, readable screens without complicated logins.", "Scopre di aver perso un evento perché l'avviso era «solo su internet».": "She finds out she missed an event because the announcement was “only online”.", "Una dashboard sola, con il Comune dentro.": "One dashboard, with the municipality at its heart.", "Il prototipo in Figma copre i flussi principali del cittadino. Gli avvisi ufficiali restano separati dai post degli utenti, così si riconoscono subito.": "The Figma prototype covers the main citizen journeys. Official announcements remain separate from user posts, so they are easy to recognise.", "Avvisi del Comune Messaggi fissati in alto, con la viabilità alternativa.": "Municipal announcements — Pinned messages, including alternative routes.", "Decisione rapida Sondaggi sì/no con una scadenza ben visibile.": "Quick decisions — Yes/no polls with a clearly visible deadline.", "Segnalazioni Invio in forma PEC e conferma con numero di protocollo.": "Reports — Submission via certified email (PEC) and confirmation with a reference number.", "Chat di quartiere Messaggi e foto per rispondere in modo visivo e veloce.": "Neighbourhood chat — Messages and photos for quick, visual communication.", "Ambiente e mobilità Meteo, energia consumata, servizi di sharing.": "Environment and mobility — Weather, energy consumption and sharing services.", "Premi per l'aiuto reciproco Punti, livelli e badge per chi partecipa.": "Rewards for helping one another — Points, levels and badges for participants.", "Le schermate dell'app": "App screens", "Una selezione delle schermate progettate per i principali servizi di Neighborly Hub.": "A selection of screens designed for Neighborly Hub’s main services.", "Le immagini mostrano schermate del prototipo e dei flussi dell'applicazione.": "The images show prototype screens and application flows.", "Accesso, supporto e trasparenza": "Access, support and transparency", "Ho progettato anche i passaggi di accesso e recupero dell'account, insieme alle pagine informative e di assistenza.": "I also designed the login and account recovery flows, together with the information and support pages.", "L'assistente AI con avatar": "The AI assistant with an avatar", "Per chi ha poca fiducia con le app ho progettato un'alternativa: basta fare una domanda a voce o per iscritto. L'assistente risponde con dati reali del Comune e, se non li trova, rimanda alle fonti ufficiali.": "For people who are less confident with apps, I designed an alternative: they can simply ask a question by voice or text. The assistant responds using real municipal data and, if it cannot find an answer, directs users to official sources.", "Dal prototipo all'app funzionante": "From prototype to working app", "Il sistema è diviso in servizi (accesso, community, avvisi civici, assistente AI, ambiente, gamification) e supporta più Comuni, con i dati di ciascuno tenuti separati.": "The system is divided into services (authentication, community, civic announcements, AI assistant, environment and gamification) and supports multiple municipalities, keeping each municipality’s data separate.", "Cosa ha detto il test di usabilità.": "What the usability test revealed.", "Ogni partecipante ha svolto compiti guidati, osservati con tempi, livello di frustrazione e commenti. Poi ha compilato i questionari SUS e UEQ.": "Each participant completed guided tasks, observed for timing, frustration levels and comments. They then completed the SUS and UEQ questionnaires.", "successo medio nei compiti": "average task success rate", "punteggio SUS medio su 100": "average SUS score out of 100", "chiarezza, la scala UEQ più alta": "clarity, the highest UEQ scale", "Scale UEQ": "UEQ scales", "Chiarezza": "Perspicuity", "Attrattività": "Attractiveness", "Stimolazione": "Stimulation", "Efficienza": "Efficiency", "Affidabilità": "Dependability", "Originalità": "Originality", "Per partecipante": "By participant", "Cosa ho imparato": "What I learned", "Funziona: la scadenza gialla «Scade tra 10 min» spinge a votare, e il numero di protocollo dopo la segnalazione dà fiducia.": "What works: the yellow “Expires in 10 min” deadline encourages people to vote, and the reference number after submitting a report builds trust.", "Da migliorare: un partecipante ha esitato sul tasto «Invia (PEC)» e il riquadro «Salute del Quartiere» non dava feedback al tocco.": "What needs improvement: one participant hesitated over the “Submit (PEC)” button, and the “Neighbourhood Health” card gave no feedback when tapped.", "Il problema principale: la griglia dei servizi e l'avatar del profilo rispondevano in ritardo. Il punteggio più basso (SUS 65) è arrivato da chi ha meno esperienza con la tecnologia. La reattività del front-end è la prima cosa da sistemare.": "The main issue: the services grid and profile avatar responded slowly. The lowest score (SUS 65) came from the participant with less technology experience. Front-end responsiveness is the first thing to improve.", "Il campione è di 3 persone: i numeri indicano una direzione, non sono una misura definitiva.": "The sample consisted of 3 people: these figures indicate a direction, not a definitive measurement.", "Cerco uno stage in UX/UI design.": "I’m looking for a UX/UI Design internship.", "Language": "Lingua", "Ciao, sono": "Hi, I’m", "Laurea triennale in Informatica · 107/110": "Bachelor’s Degree in Computer Science · 107/110", "Focus": "Focus", "Ricerca, progettazione e usabilità": "Research, design and usability", "Progetto principale": "Main project", "Neighborly Hub · tesi triennale": "Neighborly Hub · bachelor’s thesis", "Tecnologie": "Technologies", "Figma, React/Next.js, API e database": "Figma, React/Next.js, APIs and databases", "Il mio ruolo": "My role", "UX/UI design, ricerca, sviluppo": "UX/UI design, research, development", "Periodo": "Period", "nov 2025 – lug 2026": "Nov 2025 – Jul 2026", "Strumenti": "Tools", "Figma, React/Next.js, Docker, PostgreSQL": "Figma, React/Next.js, Docker, PostgreSQL", "13 compiti · 3 partecipanti": "13 tasks · 3 participants", "Avvisi del Comune": "Municipal announcements", "Messaggi fissati in alto, con la viabilità alternativa.": "Pinned messages, including alternative routes.", "Decisione rapida": "Quick decisions", "Sondaggi sì/no con una scadenza ben visibile.": "Yes/no polls with a clearly visible deadline.", "Segnalazioni": "Reports", "Invio in forma PEC e conferma con numero di protocollo.": "Submission via certified email (PEC) and confirmation with a reference number.", "Chat di quartiere": "Neighbourhood chat", "Messaggi e foto per rispondere in modo visivo e veloce.": "Messages and photos for quick, visual communication.", "Ambiente e mobilità": "Environment and mobility", "Meteo, energia consumata, servizi di sharing.": "Weather, energy consumption and sharing services.", "Premi per l'aiuto reciproco": "Rewards for helping one another", "Punti, livelli e badge per chi partecipa.": "Points, levels and badges for participants.", "Dashboard e profilo": "Dashboard and profile", "Meteo": "Weather", "Eventi": "Events", "Chat": "Chat", "Votazioni": "Polls", "Ticket e richieste": "Tickets and requests", "Mappa": "Map", "Sharing": "Sharing", "Ambiente": "Environment", "Notifiche": "Notifications", "Impostazioni": "Settings", "Flussi di autenticazione": "Authentication flows", "Login": "Login", "Registrazione": "Sign-up", "Recupero password": "Password recovery", "Nuova password": "New password", "Verifica email": "Email verification", "Supporto": "Support", "Community guidelines": "Community guidelines", "Privacy policy": "Privacy policy", "Microservizi": "Microservices", "Partecipante": "Participant", "Successo": "Success", "A": "A", "B": "B", "C": "C", "Funziona:": "What works:", "Da migliorare:": "What needs improvement:", "Il problema principale:": "The main issue:", "Parliamone.": "Let’s talk."};
+  // Keep each text node's original Italian content as the single source of truth.
+  // This makes language switching reversible and independent of previous selections.
+  const originalTexts = new WeakMap();
+  const titles = {
+    it: "Luana Zollo – UX/UI Designer · Neighborly Hub",
+    en: "Luana Zollo – UX/UI Designer · Neighborly Hub"
+  };
+  const switcher = document.getElementById('languageSwitcher');
+  const storageKey = 'luanaPortfolioLanguage';
+  const normalize = value => value.replace(/\s+/g, ' ').trim();
+  function applyLanguage(language) {
+    const lang = language === 'en' ? 'en' : 'it';
+    document.documentElement.lang = lang;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      if (!originalTexts.has(node)) originalTexts.set(node, node.nodeValue);
+      const original = originalTexts.get(node);
+      const key = normalize(original);
+      if (Object.prototype.hasOwnProperty.call(translations, key)) {
+        const leading = original.match(/^\s*/)[0];
+        const trailing = original.match(/\s*$/)[0];
+        node.nodeValue = leading + (lang === 'en' ? translations[key] : original.trim()) + trailing;
+      }
+    }
+    document.title = titles[lang];
+    if (switcher) switcher.value = lang;
+    try { localStorage.setItem(storageKey, lang); } catch (_) {}
+  }
+  let saved = 'it';
+  try { saved = localStorage.getItem(storageKey) || 'it'; } catch (_) {}
+  if (switcher) switcher.addEventListener('change', () => applyLanguage(switcher.value));
+  applyLanguage(saved);
+})();
+</script>
+</body>
+</html>
